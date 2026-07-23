@@ -1,4 +1,10 @@
 ; Alt+M 自动翻译，自动复制并打开迷你查词窗口查询
+winTitle := "迷你查词 ahk_exe eudic.exe"
+
+#HotIf WinExist(winTitle)
+Esc::Send "^+m"
+#HotIf
+
 !m::{
     A_Clipboard := ""          ; 清空旧内容
     Send "^c"                  ; 发出复制指令
