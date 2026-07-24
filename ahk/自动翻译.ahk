@@ -9,8 +9,10 @@ Esc::Send "^+m"
     Sleep 100
     text := Trim(A_Clipboard)
 
-    if (text = "")
+    if (text = "") {
+        Send "^+m"
         return
+    }
 
     winTitle := "迷你查词 ahk_exe eudic.exe"
 
