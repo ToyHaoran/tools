@@ -1,7 +1,5 @@
 ; Alt+M 自动翻译，自动复制并打开迷你查词窗口查询
-winTitle := "迷你查词 ahk_exe eudic.exe"
-
-#HotIf WinExist(winTitle)
+#HotIf WinExist("迷你查词 ahk_exe eudic.exe")
 Esc::Send "^+m"
 #HotIf
 
